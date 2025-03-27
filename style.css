@@ -1,42 +1,77 @@
-const cards = [
-  {
-    front: "🟥 URGÊNCIA x EMERGÊNCIA",
-    back: "Urgência: PA ↑ sem LOA<br>Emergência: PA ↑ com LOA (ex: AVC, EAP, IAM)"
-  },
-  {
-    front: "🧠 CASO 1: PA 200x110 + cefaleia leve",
-    back: "✅ Urgência hipertensiva<br>Medicação oral, sem LOA"
-  },
-  {
-    front: "💥 CASO 2: PA 220x130 + confusão mental",
-    back: "✅ Emergência hipertensiva<br>Encefalopatia = LOA"
-  }
-];
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fff;
+  text-align: center;
+}
 
-const container = document.getElementById("cards-container");
+header {
+  padding: 20px;
+}
 
-cards.forEach(({ front, back }) => {
-  const card = document.createElement("div");
-  card.className = "card";
+.logo {
+  width: 100px;
+}
 
-  const inner = document.createElement("div");
-  inner.className = "card-inner";
+.med { color: black; }
+.cards { color: red; }
 
-  const frontEl = document.createElement("div");
-  frontEl.className = "card-front";
-  frontEl.innerHTML = front;
+h2 {
+  font-size: 14px;
+  color: #ffb6c1;
+  margin: 4px 0 20px;
+}
 
-  const backEl = document.createElement("div");
-  backEl.className = "card-back";
-  backEl.innerHTML = back;
+#cards-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 10px;
+}
 
-  inner.appendChild(frontEl);
-  inner.appendChild(backEl);
-  card.appendChild(inner);
+.card {
+  width: 90%;
+  max-width: 340px;
+  height: 240px;
+  perspective: 1000px;
+}
 
-  card.addEventListener("click", () => {
-    card.classList.toggle("flipped");
-  });
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
 
-  container.appendChild(card);
-});
+.card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  border-radius: 10px;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  line-height: 1.4;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.card-front {
+  background: white;
+  color: black;
+}
+
+.card-back {
+  background: #880808;
+  color: white;
+  transform: rotateY(180deg);
+}
