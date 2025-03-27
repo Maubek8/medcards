@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>MEDCARDS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background: #fff;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      position: relative;
+      width: 100%;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .logo {
+      width: 100px;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 32px;
+    }
+
+    .med { color: black; }
+    .cards { color: red; }
+
+    h2 {
+      font-size: 16px;
+      color: #ffb6c1;
+      margin-top: 4px;
+    }
+
+    .top-buttons {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      right: 20px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .top-buttons button {
+      background: none;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    .card {
+      width: 90%;
+      max-width: 320px;
+      height: 220px;
+      perspective: 1000px;
+      margin: 30px 0;
+    }
+
+    .card-inner {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .card:hover .card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .card-front, .card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      padding: 20px;
+      border-radius: 12px;
+      backface-visibility: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      font-size: 16px;
+      text-align: center;
+    }
+
+    .card-front {
+      background-color: #ffffff;
+      color: #000;
+    }
+
+    .card-back {
+      background-color: #880808;
+      color: white;
+      transform: rotateY(180deg);
+    }
+
+    footer {
+      padding: 20px;
+      font-size: 12px;
+      color: #999;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="top-buttons">
+      <button onclick="alert('Retornar ao menu principal em breve')">🏠</button>
+      <button onclick="alert('Menu de cards em desenvolvimento')">☰</button>
+    </div>
+    <img src="logo.png" alt="Logo do MedCards" class="logo">
+    <h1><span class="med">MED</span><span class="cards">CARDS</span></h1>
+    <h2>Smart learning</h2>
+  </header>
+
+  <div class="card">
+    <div class="card-inner">
+      <div class="card-front">
+        Qual a diferença entre urgência e emergência hipertensiva?
+      </div>
+      <div class="card-back">
+        <strong>Urgência:</strong> PA muito alta sem lesão de órgão-alvo.<br>
+        <strong>Emergência:</strong> PA muito alta com lesão aguda de órgão-alvo (ex: AVC, IAM, EAP).
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 MEDCARDS – Todos os direitos reservados.
+  </footer>
+</body>
+</html>
