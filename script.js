@@ -1,41 +1,15 @@
 const cards = [
   {
-    front: "🟥 COMPARATIVO: É urgência ou emergência?",
-    back: `
-    <strong>URGÊNCIA:</strong><br>
-    - PA elevada sem LOA<br>
-    - Sintomas leves: cefaleia, epistaxe leve<br><br>
-    <strong>EMERGÊNCIA:</strong><br>
-    - PA elevada com LOA<br>
-    - Ex: AVC, IAM, edema agudo de pulmão
-    `
+    front: "🟥 URGÊNCIA x EMERGÊNCIA",
+    back: "Urgência: PA ↑ sem LOA<br>Emergência: PA ↑ com LOA (ex: AVC, EAP, IAM)"
   },
   {
-    front: "🧠 EXEMPLO 1: PA 200x110 + cefaleia leve. É urgência?",
-    back: "✅ SIM – É urgência hipertensiva (sem LOA).<br>Conduta: medicação oral e observação."
+    front: "🧠 CASO 1: PA 200x110 + cefaleia leve",
+    back: "✅ Urgência hipertensiva<br>Medicação oral, sem LOA"
   },
   {
-    front: "💥 EXEMPLO 2: PA 220x130 + confusão mental. É emergência?",
-    back: "✅ SIM – Suspeita de encefalopatia hipertensiva (LOA).<br>Conduta: internação e medicação EV."
-  },
-  {
-    front: "📚 DEFINIÇÃO: O que é crise hipertensiva?",
-    back: "PA ≥180x120 mmHg com ou sem lesão de órgão-alvo (LOA).<br>Divide-se em <strong>urgência</strong> (sem LOA) e <strong>emergência</strong> (com LOA)."
-  },
-  {
-    front: "🧾 REFERÊNCIA BRASILEIRA",
-    back: `Diretriz Brasileira de Hipertensão Arterial - SBC 2020<br>
-    <em>https://departamentos.cardiol.br/dha</em>`
-  },
-  {
-    front: "🩺 CASO CLÍNICO 1",
-    back: `Homem 65a, PA 210x120, cefaleia leve, sem alterações visuais ou neurológicas.<br><br>
-    ❓ Diagnóstico? <br>✅ URGÊNCIA HIPERTENSIVA`
-  },
-  {
-    front: "🩺 CASO CLÍNICO 2",
-    back: `Mulher 58a, PA 240x130, dispneia súbita, estertores e B3 no exame físico.<br><br>
-    ❓ Diagnóstico? <br>✅ EMERGÊNCIA HIPERTENSIVA (EAP)`
+    front: "💥 CASO 2: PA 220x130 + confusão mental",
+    back: "✅ Emergência hipertensiva<br>Encefalopatia = LOA"
   }
 ];
 
