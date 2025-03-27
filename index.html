@@ -2,17 +2,14 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>MEDCARDS</title>
+  <title>MEDCARDS – Hipertensão</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
+    * { box-sizing: border-box; }
     body {
       margin: 0;
       padding: 0;
-      font-family: 'Arial', sans-serif;
+      font-family: Arial, sans-serif;
       background: #fff;
       color: #333;
       display: flex;
@@ -32,19 +29,10 @@
       margin-bottom: 10px;
     }
 
-    h1 {
-      margin: 0;
-      font-size: 32px;
-    }
-
+    h1 { margin: 0; font-size: 32px; }
     .med { color: black; }
     .cards { color: red; }
-
-    h2 {
-      font-size: 16px;
-      color: #ffb6c1;
-      margin-top: 4px;
-    }
+    h2 { font-size: 16px; color: #ffb6c1; margin-top: 4px; }
 
     .top-buttons {
       position: absolute;
@@ -62,12 +50,20 @@
       cursor: pointer;
     }
 
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      padding: 20px;
+      width: 100%;
+    }
+
     .card {
       width: 90%;
-      max-width: 320px;
-      height: 220px;
+      max-width: 360px;
+      height: 240px;
       perspective: 1000px;
-      margin: 30px 0;
     }
 
     .card-inner {
@@ -91,11 +87,12 @@
       border-radius: 12px;
       backface-visibility: hidden;
       display: flex;
-      align-items: center;
+      flex-direction: column;
       justify-content: center;
+      text-align: center;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
       font-size: 16px;
-      text-align: center;
+      overflow-y: auto;
     }
 
     .card-front {
@@ -109,33 +106,76 @@
       transform: rotateY(180deg);
     }
 
+    .big-card {
+      max-width: 90%;
+      background: #ffe5e5;
+      padding: 20px;
+      border-radius: 12px;
+      margin: 30px 0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      font-size: 14px;
+      line-height: 1.6;
+      text-align: left;
+    }
+
     footer {
       padding: 20px;
       font-size: 12px;
       color: #999;
+      text-align: center;
     }
   </style>
 </head>
 <body>
   <header>
     <div class="top-buttons">
-      <button onclick="alert('Retornar ao menu principal em breve')">🏠</button>
-      <button onclick="alert('Menu de cards em desenvolvimento')">☰</button>
+      <button onclick="alert('Menu principal em construção')">🏠</button>
+      <button onclick="alert('Menu de temas em breve')">☰</button>
     </div>
     <img src="mcsl.png" alt="Logo do MedCards" class="logo">
     <h1><span class="med">MED</span><span class="cards">CARDS</span></h1>
     <h2>Smart learning</h2>
   </header>
 
-  <div class="card">
-    <div class="card-inner">
-      <div class="card-front">
-        Qual a diferença entre urgência e emergência hipertensiva?
-      </div>
-      <div class="card-back">
-        <strong>Urgência:</strong> PA muito alta sem lesão de órgão-alvo.<br>
-        <strong>Emergência:</strong> PA muito alta com lesão aguda de órgão-alvo (ex: AVC, IAM, EAP).
-      </div>
+  <div class="container">
+    <!-- Cards 1 a 8 -->
+    <div class="card"><div class="card-inner"><div class="card-front">CARD 1<br>Qual a definição de crise hipertensiva?</div><div class="card-back">PA ≥180x120 mmHg (ou muito elevada)<br>com ou sem LOA.<br>Divide-se em urgência e emergência.</div></div></div>
+
+    <div class="card"><div class="card-inner"><div class="card-front">CARD 2<br>Diferença entre urgência e emergência hipertensiva?</div><div class="card-back"><strong>Urgência:</strong> PA elevada sem LOA<br><strong>Emergência:</strong> PA elevada com LOA aguda</div></div></div>
+
+    <div class="card"><div class="card-inner"><div class="card-front">CARD 3<br>Quais os órgãos-alvo nas emergências?</div><div class="card-back">🧠 AVC, encefalopatia<br>❤️ IAM, EAP<br>👁️ Retinopatia grave<br>🩸 Lesão renal<br>🛠️ Dissecção de aorta</div></div></div>
+
+    <div class="card"><div class="card-inner"><div class="card-front">CARD 4<br>Como tratar uma emergência hipertensiva?</div><div class="card-back">- Internação (UTI)<br>- Redução rápida<br>- Medicação IV (nitroprussiato, labetalol...)</div></div></div>
+
+    <div class="card"><div class="card-inner"><div class="card-front">CARD 5<br>Como tratar uma urgência hipertensiva?</div><div class="card-back">- Ambulatorial<br>- Medicação oral (captopril...)<br>- Redução em 24–48h</div></div></div>
+
+    <div class="card"><div class="card-inner"><div class="card-front">CARD 6<br>PA 220x120 + confusão mental. Diagnóstico?</div><div class="card-back">Emergência hipertensiva<br>(provável encefalopatia hipertensiva)</div></div></div>
+
+    <div class="card"><div class="card-inner"><div class="card-front">CARD 7<br>PA 200x110 + sem sintomas. Conduta?</div><div class="card-back">Urgência hipertensiva → Medicação oral<br>Reavaliar em 24–48h</div></div></div>
+
+    <div class="card"><div class="card-inner"><div class="card-front">CARD 8<br>Pergunta-chave para diferenciar?</div><div class="card-back">Há lesão de órgão-alvo aguda?<br>✅ Sim = Emergência<br>❌ Não = Urgência</div></div></div>
+
+    <!-- Card Esquema Grande -->
+    <div class="big-card">
+      <h3>🩺 Esquema Resumo: Urgência vs Emergência Hipertensiva</h3>
+      <p><strong>1. Comece pela PA elevada:</strong> ≥180x120 mmHg → Crise hipertensiva</p>
+      <p><strong>2. Existe lesão aguda de órgão-alvo (LOA)?</strong><br>✅ Sim → Emergência<br>❌ Não → Urgência</p>
+
+      <strong>🔴 Emergência:</strong>
+      <ul>
+        <li>PA elevada + LOA aguda</li>
+        <li>Ex: AVC, IAM, EAP, dissecção</li>
+        <li>Conduta: Medicação IV, internação, controle rápido</li>
+      </ul>
+
+      <strong>🟡 Urgência:</strong>
+      <ul>
+        <li>PA elevada sem LOA</li>
+        <li>Ex: cefaleia, epistaxe leve</li>
+        <li>Conduta: Medicação oral, redução gradual</li>
+      </ul>
+
+      <p><strong>🎓 DICA MENTAL:</strong><br>“Se tem órgão sofrendo, é emergência.<br>Se está só gritando (PA alta), é urgência.”</p>
     </div>
   </div>
 
