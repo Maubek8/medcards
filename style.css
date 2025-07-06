@@ -1,0 +1,112 @@
+/* =======================
+   AXIS Vent - style.css
+   ======================= */
+
+:root {
+    --primary: #3B82F6;    /* Azul */
+    --secondary: #8B5CF6;  /* Roxo */
+    --accent: #EC4899;     /* Rosa */
+    --dark: #0F172A;       /* Quase preto */
+    --light: #F1F5F9;      /* Cinza claro */
+}
+
+/* ======= Fundo animado ======= */
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    color: var(--light);
+    min-height: 100vh;
+    background: linear-gradient(-45deg, var(--primary), var(--secondary), var(--accent), var(--primary));
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    scroll-behavior: smooth;
+}
+
+@keyframes gradientBG {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+/* ======= Seções ======= */
+.section {
+    background: rgba(0,0,0,0.4);
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin: 1rem;
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.section:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.4);
+}
+
+header {
+    text-align: center;
+    padding: 1rem;
+}
+header img {
+    width: 80px;
+    filter: drop-shadow(0 0 8px rgba(0,0,0,0.4));
+}
+h1 {
+    font-size: 2rem;
+    margin: 0.5rem 0;
+}
+h2 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+/* ======= Botões ======= */
+button, .cta-float {
+    background: linear-gradient(135deg, var(--accent), var(--secondary));
+    border: none;
+    border-radius: 12px;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+    text-decoration: none;
+    display: inline-block;
+}
+button:hover, .cta-float:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.4);
+    background: linear-gradient(135deg, var(--secondary), var(--accent));
+}
+
+/* ======= Botão flutuante CTA ======= */
+.cta-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 50px;
+    z-index: 1000;
+}
+
+/* ======= Footer ======= */
+footer {
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+
+/* ======= Responsividade ======= */
+@media (max-width: 480px) {
+    h1 { font-size: 1.5rem; }
+    h2 { font-size: 1rem; }
+    button, .cta-float { font-size: 0.9rem; padding: 0.8rem 1.5rem; }
+}
