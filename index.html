@@ -1,32 +1,31 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AXIS Vent - Decisão Ventilatória Inteligente</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Hero Section Refatorado -->
+  <!-- Hero Section -->
   <section class="hero">
     <div class="logo">A</div>
     <h1>AXIS Vent</h1>
     <h2>Decisões ventilatórias com precisão — mesmo quando você está sozinho no plantão.</h2>
     <p class="hero-subtitle">Seu copiloto clínico para validação, orientação e ajuste seguro em tempo real em UTI, emergência e plantão crítico.</p>
-  </section>
-
-  <!-- Novo CTA HERO -->
-  <section class="cta-hero">
-    <button class="cta-pulse" id="main-cta">
-      <span class="emoji">🚨</span>
-      <span class="text">Não fique sozinho no próximo plantão</span>
-      <span class="subtext">Ativar AXIS Vent agora</span>
-    </button>
-    <p class="cta-note">Já ajudou +287 médicos em situações críticas este mês</p>
+    
+    <div class="cta-hero">
+      <button class="cta-pulse" id="main-cta">
+        <span class="emoji">🚨</span>
+        <span class="text">Não fique sozinho no próximo plantão</span>
+        <span class="subtext">Ativar AXIS Vent agora</span>
+      </button>
+      <p class="cta-note">Já ajudou +287 médicos em situações críticas este mês</p>
+    </div>
   </section>
 
   <!-- Pain Points Section -->
@@ -42,11 +41,6 @@
     </div>
   </section>
 
-<!-- Botões explicativos inline -->
-<button class="info-button" data-info="peep">ℹ️ O que é PEEP?</button>
-<button class="info-button" data-info="driving-pressure">ℹ️ Driving Pressure?</button>
-<button class="info-button" data-info="plato">ℹ️ Platô?</button>
-  
   <!-- Features -->
   <section class="features">
     <div class="feature-card">
@@ -120,7 +114,7 @@
     </ul>
   </section>
 
-  <!-- URGENCY CARDS ANTES DO FAQ -->
+  <!-- Urgency Cards -->
   <section class="urgency-cards">
     <div class="urgency-card">
       <h3>Você já passou por isso?</h3>
@@ -170,25 +164,35 @@
     <p>AXIS Vent © 2025 - Todos os direitos reservados</p>
   </footer>
 
-  <!-- BOTÃO FLUTUANTE REFATORADO -->
+  <!-- Floating CTA -->
   <button class="cta-float cta-emergency">
     <span>EMERGÊNCIA VENTILATÓRIA?</span>
     <span>Clique aqui para ajuda rápida</span>
   </button>
 
-  <!-- POPUP Container -->
+  <!-- Popup Container -->
   <div id="popup-container" class="popup-hidden">
     <div class="popup-content">
       <button id="close-popup" class="popup-close">×</button>
       <h3>Ativar AXIS Vent</h3>
       <p>Preencha para acessar imediatamente:</p>
       <form id="signup-form">
-        <input type="text" placeholder="Nome completo" required />
-        <input type="email" placeholder="E-mail profissional" required />
-        <input type="tel" placeholder="WhatsApp (com DDD)" required />
+        <input type="text" placeholder="Nome completo" required>
+        <input type="email" placeholder="E-mail profissional" required>
+        <input type="tel" placeholder="WhatsApp (com DDD)" required>
         <button type="submit" class="cta-primary">Acessar Agora</button>
       </form>
       <p class="popup-note">Plano mensal, sem fidelidade. Cancele quando quiser.</p>
+    </div>
+  </div>
+
+  <!-- Curious Popup -->
+  <div id="curious-popup" class="curious-hidden">
+    <div class="curious-content">
+      <button id="close-curious" class="curious-close">×</button>
+      <p>Curioso? 😊</p>
+      <p>Aguarde o projeto final!</p>
+      <div class="smiley">😉</div>
     </div>
   </div>
 
