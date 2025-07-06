@@ -1,102 +1,177 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>AXIS Vent - Decisão Ventilatória</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-<style>
-:root {
-    --primary: #3B82F6;
-    --secondary: #8B5CF6;
-    --accent: #EC4899;
-    --dark: #0F172A;
-    --light: #F1F5F9;
-}
-body {
-    margin: 0; font-family: 'Inter', sans-serif; color: var(--light);
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
-    display: flex; flex-direction: column; align-items: center; scroll-behavior: smooth;
-}
-header {
-    width: 100%; padding: 1rem; text-align: center;
-}
-header img { width: 80px; filter: drop-shadow(0 0 8px rgba(0,0,0,0.4)); }
-h1 { font-size: 2rem; margin: 0.5rem 0; }
-h2 { font-size: 1.2rem; font-weight: 400; margin-bottom: 1rem; }
-.section {
-    background: rgba(0,0,0,0.3); border-radius: 16px; padding: 1.5rem; margin: 1rem; max-width: 500px; width: 90%; text-align: center;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
-    transition: transform 0.3s;
-}
-.section:hover { transform: translateY(-4px); }
-button {
-    background: linear-gradient(135deg, var(--accent), var(--secondary)); border: none; border-radius: 12px;
-    padding: 1rem 2rem; font-size: 1rem; color: white; font-weight: 600; cursor: pointer;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-button:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.4); }
-footer { padding: 1rem; text-align: center; font-size: 0.8rem; opacity: 0.8; }
-a.cta-float {
-    position: fixed; bottom: 20px; right: 20px; background: linear-gradient(135deg, var(--accent), var(--secondary));
-    color: white; padding: 1rem 1.5rem; border-radius: 50px; font-weight: 600; text-decoration: none;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.3); transition: transform 0.3s, box-shadow 0.3s; z-index: 1000;
-}
-a.cta-float:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.4); }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AXIS Vent - Decisão Ventilatória Inteligente</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="logo">A</div>
+    <h1>AXIS Vent</h1>
+    <h2>Decisões ventilatórias com precisão — mesmo quando você está sozinho no plantão.</h2>
+    <p class="hero-subtitle">Seu novo copiloto clínico. Validação, orientação e ajuste seguro em tempo real para médicos de UTI, emergência e plantão crítico.</p>
+    <button class="cta-primary" id="main-cta">➡ Ativar meu acesso ao AXIS Vent agora</button>
+    <div class="hero-image"></div>
+  </section>
 
-<header>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Sample_User_Icon.png/480px-Sample_User_Icon.png" alt="AXIS Vent">
-    <h1>🌬 AXIS Vent</h1>
-    <h2>Decisões ventilatórias com precisão — mesmo sozinho no plantão.</h2>
-</header>
+  <!-- Pain Points Section -->
+  <section class="pain-points">
+    <div class="container">
+      <h3>Você já:</h3>
+      <ul>
+        <li>✅ Ajustou VM com medo de errar?</li>
+        <li>✅ Ficou sem resposta de ninguém enquanto o paciente piorava?</li>
+        <li>✅ Perdeu sono depois de um plantão por causa de uma dúvida ventilatória?</li>
+      </ul>
+      <p>Você não precisa mais passar por isso sozinho. AXIS Vent nasceu pra te dar respaldo, clareza e validação nos momentos mais críticos do plantão.</p>
+    </div>
+  </section>
 
-<div class="section">
-    <p>🚨 Está no plantão, paciente instável, dúvida na ventilação?</p>
-    <p>Com o <strong>AXIS Vent</strong> você decide com confiança, rapidez e segurança.</p>
-</div>
+  <!-- What is AXIS Vent -->
+  <section class="features">
+    <div class="feature-card">
+      <div class="feature-icon">🔹</div>
+      <h4>Orientação Clínica</h4>
+      <p>Sugestões rápidas com base em lógica ventilatória testada na prática.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🔹</div>
+      <h4>Validação de Conduta</h4>
+      <p>Você insere o cenário e recebe resposta lógica. Nada de achismos.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🔹</div>
+      <h4>Confiança Instantânea</h4>
+      <p>Decida com precisão mesmo sem especialista por perto.</p>
+    </div>
+  </section>
 
-<div class="section">
-    <p>✅ Orienta condutas ventilatórias baseadas em lógica clínica</p>
-    <p>✅ Valida seu raciocínio em casos críticos</p>
-    <p>✅ Reduz a carga emocional e mental do plantão</p>
-</div>
+  <!-- Target Audience -->
+  <section class="audience">
+    <div class="audience-for">
+      <h3>✅ Ideal para:</h3>
+      <ul>
+        <li>Médicos plantonistas em UTI, emergência ou pronto-atendimento</li>
+        <li>Residentes, R+1 e recém-formados que enfrentam decisões reais</li>
+        <li>Quem lida com pressão, risco e solidão clínica em condutas ventilatórias</li>
+      </ul>
+    </div>
+    <div class="audience-not">
+      <h3>❌ Não é para:</h3>
+      <ul>
+        <li>Quem acha que protocolo impresso resolve tudo</li>
+        <li>Quem prefere decorar diretriz do que entender conduta</li>
+        <li>Quem não aceita ajuda na hora da pressão</li>
+      </ul>
+    </div>
+  </section>
 
-<div class="section">
-    <p>🧑‍⚕ <strong>Para quem é:</strong></p>
-    <p>✔ Médicos de UTI, emergência e pronto-socorro</p>
-    <p>✔ Residentes e recém-formados em plantão</p>
-    <p>✔ Quem precisa de apoio em decisões ventilatórias críticas</p>
-</div>
+  <!-- Benefits -->
+  <section class="benefits">
+    <h3>Benefícios Reais:</h3>
+    <ul>
+      <li>✔ Reduz risco clínico real</li>
+      <li>✔ Traz clareza mesmo em cenários atípicos</li>
+      <li>✔ Funciona em segundos, direto ao ponto</li>
+      <li>✔ Leva a decisão ventilatória pro próximo nível</li>
+      <li>✔ Pode ser usado no celular, tablet ou desktop</li>
+    </ul>
+  </section>
 
-<div class="section">
-    <p>❌ <strong>Não é para:</strong></p>
-    <p>• Quem prefere decorar diretrizes sem raciocinar</p>
-    <p>• Quem acha que “seguir o protocolo” resolve tudo</p>
-</div>
+  <!-- Testimonial -->
+  <section class="testimonial">
+    <blockquote>
+      "Tive um caso grave às 3h da manhã, sem supervisor. O AXIS Vent me deu o raciocínio clínico que eu precisava pra agir com segurança. Foi como ter um intensivista do meu lado."
+      <cite>— Médico plantonista, SP</cite>
+    </blockquote>
+    <div class="video-placeholder"></div>
+  </section>
 
-<div class="section">
-    <p>💬 <em>"Era 3h da manhã. O paciente começou a fazer auto-PEEP, eu estava sozinho. O AXIS Vent me ajudou a decidir em segundos. Me senti seguro."</em> — Médico plantonista, SP</p>
-</div>
+  <!-- Bonus -->
+  <section class="bonus">
+    <h3>🎁 Bônus Exclusivo</h3>
+    <p>Guia de Decisão Ventilatória em 10 Cenários Críticos</p>
+    <ul>
+      <li>Complacência baixa</li>
+      <li>Auto-PEEP</li>
+      <li>Hipercapnia refratária</li>
+      <li>Volume corrente alto</li>
+      <li>Ventilação com acidose respiratória</li>
+    </ul>
+  </section>
 
-<div class="section">
-    <p>🎁 <strong>Ative agora e ganhe:</strong></p>
-    <p>Guia de Decisão Ventilatória em 10 cenários críticos</p>
-    <p>Inclui: complacência baixa, hipercapnia, auto-PEEP, acidose respiratória e mais</p>
-</div>
+  <!-- Final CTA -->
+  <section class="final-cta">
+    <p>Você já tem o conhecimento. O que te falta é respaldo no momento certo.</p>
+    <p>AXIS Vent é o que separa a dúvida do erro — e o erro do resultado.</p>
+    <button class="cta-primary">🚀 Quero o AXIS Vent comigo no próximo plantão</button>
+  </section>
 
-<div class="section">
-    <button onclick="window.location.href='https://seucheckout.com'">🚀 Ativar AXIS Vent Agora</button>
-</div>
+  <!-- FAQ -->
+  <section class="faq">
+    <h3>❓ Perguntas Frequentes</h3>
+    <div class="faq-item">
+      <button class="faq-question">Posso usar no celular durante o plantão?</button>
+      <div class="faq-answer">
+        <p>Sim. O sistema é leve, rápido e compatível com mobile.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">É um curso?</button>
+      <div class="faq-answer">
+        <p>Não. É uma ferramenta de apoio à decisão, não conteúdo gravado.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">E se eu não souber interpretar a resposta?</button>
+      <div class="faq-answer">
+        <p>O AXIS Vent fala sua língua. Nada técnico demais. Tudo aplicável.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Tem suporte?</button>
+      <div class="faq-answer">
+        <p>Sim. Damos suporte técnico e orientações clínicas adicionais quando necessário.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Posso cancelar?</button>
+      <div class="faq-answer">
+        <p>Sim, plano mensal sem fidelidade. Cancele quando quiser.</p>
+      </div>
+    </div>
+  </section>
 
-<footer>
-    AXIS Vent © 2025 - Todos os direitos reservados
-</footer>
+  <!-- Footer -->
+  <footer>
+    <p>AXIS Vent © 2025 - Todos os direitos reservados</p>
+  </footer>
 
-<a href="https://seucheckout.com" class="cta-float">🚀 Ativar AXIS Vent</a>
+  <!-- Floating CTA -->
+  <button class="cta-float">🚀 Ativar AXIS Vent</button>
 
+  <!-- Popup Container -->
+  <div id="popup-container" class="popup-hidden">
+    <div class="popup-content">
+      <button id="close-popup" class="popup-close">×</button>
+      <h3>Ativar AXIS Vent</h3>
+      <p>Preencha para acessar imediatamente:</p>
+      <form id="signup-form">
+        <input type="text" placeholder="Nome completo" required>
+        <input type="email" placeholder="E-mail profissional" required>
+        <input type="tel" placeholder="WhatsApp (com DDD)" required>
+        <button type="submit" class="cta-primary">Acessar Agora</button>
+      </form>
+      <p class="popup-note">Plano mensal, sem fidelidade. Cancele quando quiser.</p>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
 </body>
 </html>
